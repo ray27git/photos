@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Photos per day grouped by camera model",
+  "data": {
+    "url": "photos_day_view.json",
+    "format": {
+      "type": "json"
+    }
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "day",
+      "type": "ordinal",
+      "title": "Day of Month"
+    },
+    "y": {
+      "field": "count",
+      "type": "quantitative",
+      "title": "Photo Count"
+    },
+    "color": {
+      "field": "camera_model",
+      "type": "nominal",
+      "legend": {
+        "title": "Camera"
+      }
+    }
+  }
+}
